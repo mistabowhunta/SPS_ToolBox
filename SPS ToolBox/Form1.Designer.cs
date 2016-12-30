@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblA = new System.Windows.Forms.LinkLabel();
             this.lblB = new System.Windows.Forms.LinkLabel();
@@ -56,48 +56,51 @@
             this.lblX = new System.Windows.Forms.LinkLabel();
             this.lblY = new System.Windows.Forms.LinkLabel();
             this.lblZ = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
+            this.btnBomComparison = new System.Windows.Forms.Button();
+            this.btnCbom = new System.Windows.Forms.Button();
+            this.btnCsrWorkBench = new System.Windows.Forms.Button();
+            this.btnDataExplorer = new System.Windows.Forms.Button();
+            this.btnEcm = new System.Windows.Forms.Button();
+            this.btnEdpm = new System.Windows.Forms.Button();
+            this.btnFfrCalculator = new System.Windows.Forms.Button();
+            this.btnFfrQuality = new System.Windows.Forms.Button();
+            this.btnFoxPro = new System.Windows.Forms.Button();
+            this.btnInstallBase = new System.Windows.Forms.Button();
+            this.btnKeiWebApps = new System.Windows.Forms.Button();
+            this.btnOmar = new System.Windows.Forms.Button();
+            this.btnOracleMfg = new System.Windows.Forms.Button();
+            this.btnOut = new System.Windows.Forms.Button();
+            this.btnOutQuery = new System.Windows.Forms.Button();
+            this.btnPfListBySwimLane = new System.Windows.Forms.Button();
+            this.btnPlsqlDeveloper = new System.Windows.Forms.Button();
+            this.btnPortfolioPage = new System.Windows.Forms.Button();
+            this.btnPriceAdmin = new System.Windows.Forms.Button();
+            this.btnRpdb = new System.Windows.Forms.Button();
+            this.btnSpsSharepoint = new System.Windows.Forms.Button();
+            this.btnSqlAvgCalCostProduct = new System.Windows.Forms.Button();
+            this.btnSqlCalReturnRateProduct = new System.Windows.Forms.Button();
+            this.btnSqlInstallBase = new System.Windows.Forms.Button();
+            this.btnSqlPartUsage = new System.Windows.Forms.Button();
+            this.btnSqlPartsPricingHistory = new System.Windows.Forms.Button();
+            this.btnSqlSvcActivityProduct = new System.Windows.Forms.Button();
+            this.btnSqlSvcContractPricingHistory = new System.Windows.Forms.Button();
+            this.btnSqlSvcPricingHistory = new System.Windows.Forms.Button();
+            this.btnStockPlacesAndLocations = new System.Windows.Forms.Button();
+            this.btnTekHome = new System.Windows.Forms.Button();
+            this.btnTekItemQuery = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnLastSearched = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(687, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox1.Size = new System.Drawing.Size(256, 32);
-            this.textBox1.TabIndex = 0;
+            this.txtSearch.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(687, 40);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSearch.Size = new System.Drawing.Size(256, 32);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label1
             // 
@@ -119,6 +122,7 @@
             this.lblA.TabIndex = 2;
             this.lblA.TabStop = true;
             this.lblA.Text = "A";
+            this.lblA.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblA_LinkClicked);
             // 
             // lblB
             // 
@@ -130,6 +134,7 @@
             this.lblB.TabIndex = 3;
             this.lblB.TabStop = true;
             this.lblB.Text = "B";
+            this.lblB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblB_LinkClicked);
             // 
             // lblC
             // 
@@ -141,6 +146,7 @@
             this.lblC.TabIndex = 4;
             this.lblC.TabStop = true;
             this.lblC.Text = "C";
+            this.lblC.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblC_LinkClicked);
             // 
             // lblD
             // 
@@ -152,6 +158,7 @@
             this.lblD.TabIndex = 5;
             this.lblD.TabStop = true;
             this.lblD.Text = "D";
+            this.lblD.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblD_LinkClicked);
             // 
             // lblE
             // 
@@ -163,6 +170,7 @@
             this.lblE.TabIndex = 6;
             this.lblE.TabStop = true;
             this.lblE.Text = "E";
+            this.lblE.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblE_LinkClicked);
             // 
             // lblF
             // 
@@ -174,6 +182,7 @@
             this.lblF.TabIndex = 7;
             this.lblF.TabStop = true;
             this.lblF.Text = "F";
+            this.lblF.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblF_LinkClicked);
             // 
             // lblG
             // 
@@ -185,6 +194,7 @@
             this.lblG.TabIndex = 8;
             this.lblG.TabStop = true;
             this.lblG.Text = "G";
+            this.lblG.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblG_LinkClicked);
             // 
             // lblH
             // 
@@ -196,6 +206,7 @@
             this.lblH.TabIndex = 9;
             this.lblH.TabStop = true;
             this.lblH.Text = "H";
+            this.lblH.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblH_LinkClicked);
             // 
             // lblI
             // 
@@ -207,6 +218,7 @@
             this.lblI.TabIndex = 10;
             this.lblI.TabStop = true;
             this.lblI.Text = "I";
+            this.lblI.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblI_LinkClicked);
             // 
             // lblJ
             // 
@@ -218,6 +230,7 @@
             this.lblJ.TabIndex = 11;
             this.lblJ.TabStop = true;
             this.lblJ.Text = "J";
+            this.lblJ.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblJ_LinkClicked);
             // 
             // lblK
             // 
@@ -229,6 +242,7 @@
             this.lblK.TabIndex = 12;
             this.lblK.TabStop = true;
             this.lblK.Text = "K";
+            this.lblK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblK_LinkClicked);
             // 
             // lblL
             // 
@@ -240,6 +254,7 @@
             this.lblL.TabIndex = 13;
             this.lblL.TabStop = true;
             this.lblL.Text = "L";
+            this.lblL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblL_LinkClicked);
             // 
             // lblM
             // 
@@ -251,6 +266,7 @@
             this.lblM.TabIndex = 14;
             this.lblM.TabStop = true;
             this.lblM.Text = "M";
+            this.lblM.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblM_LinkClicked);
             // 
             // lblN
             // 
@@ -262,6 +278,7 @@
             this.lblN.TabIndex = 15;
             this.lblN.TabStop = true;
             this.lblN.Text = "N";
+            this.lblN.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblN_LinkClicked);
             // 
             // lblO
             // 
@@ -273,6 +290,7 @@
             this.lblO.TabIndex = 16;
             this.lblO.TabStop = true;
             this.lblO.Text = "O";
+            this.lblO.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblO_LinkClicked);
             // 
             // lblP
             // 
@@ -284,6 +302,7 @@
             this.lblP.TabIndex = 17;
             this.lblP.TabStop = true;
             this.lblP.Text = "P";
+            this.lblP.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblP_LinkClicked);
             // 
             // lblQ
             // 
@@ -295,6 +314,7 @@
             this.lblQ.TabIndex = 18;
             this.lblQ.TabStop = true;
             this.lblQ.Text = "Q";
+            this.lblQ.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblQ_LinkClicked);
             // 
             // lblR
             // 
@@ -306,6 +326,7 @@
             this.lblR.TabIndex = 19;
             this.lblR.TabStop = true;
             this.lblR.Text = "R";
+            this.lblR.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblR_LinkClicked);
             // 
             // lblS
             // 
@@ -317,6 +338,7 @@
             this.lblS.TabIndex = 20;
             this.lblS.TabStop = true;
             this.lblS.Text = "S";
+            this.lblS.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblS_LinkClicked);
             // 
             // lblT
             // 
@@ -328,6 +350,7 @@
             this.lblT.TabIndex = 21;
             this.lblT.TabStop = true;
             this.lblT.Text = "T";
+            this.lblT.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblT_LinkClicked);
             // 
             // lblU
             // 
@@ -339,6 +362,7 @@
             this.lblU.TabIndex = 22;
             this.lblU.TabStop = true;
             this.lblU.Text = "U";
+            this.lblU.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblU_LinkClicked);
             // 
             // lblV
             // 
@@ -350,6 +374,7 @@
             this.lblV.TabIndex = 23;
             this.lblV.TabStop = true;
             this.lblV.Text = "V";
+            this.lblV.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblV_LinkClicked);
             // 
             // lblW
             // 
@@ -361,6 +386,7 @@
             this.lblW.TabIndex = 24;
             this.lblW.TabStop = true;
             this.lblW.Text = "W";
+            this.lblW.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblW_LinkClicked);
             // 
             // lblX
             // 
@@ -372,6 +398,7 @@
             this.lblX.TabIndex = 25;
             this.lblX.TabStop = true;
             this.lblX.Text = "X";
+            this.lblX.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblX_LinkClicked);
             // 
             // lblY
             // 
@@ -383,6 +410,7 @@
             this.lblY.TabIndex = 26;
             this.lblY.TabStop = true;
             this.lblY.Text = "Y";
+            this.lblY.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblY_LinkClicked);
             // 
             // lblZ
             // 
@@ -394,364 +422,420 @@
             this.lblZ.TabIndex = 27;
             this.lblZ.TabStop = true;
             this.lblZ.Text = "Z";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 135);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 40);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(126, 135);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 40);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(243, 135);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 40);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(359, 135);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 40);
-            this.button4.TabIndex = 31;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(477, 135);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 40);
-            this.button5.TabIndex = 32;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(593, 135);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(120, 40);
-            this.button6.TabIndex = 33;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(706, 135);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(120, 40);
-            this.button7.TabIndex = 34;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(823, 135);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(120, 40);
-            this.button8.TabIndex = 35;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(12, 172);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(120, 40);
-            this.button9.TabIndex = 36;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(126, 172);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(120, 40);
-            this.button10.TabIndex = 37;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(243, 172);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(120, 40);
-            this.button11.TabIndex = 38;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(359, 172);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(120, 40);
-            this.button12.TabIndex = 39;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(477, 172);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(120, 40);
-            this.button13.TabIndex = 40;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.Location = new System.Drawing.Point(593, 172);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(120, 40);
-            this.button14.TabIndex = 41;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(706, 172);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(120, 40);
-            this.button15.TabIndex = 42;
-            this.button15.Text = "button15";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(823, 172);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(120, 40);
-            this.button16.TabIndex = 43;
-            this.button16.Text = "button16";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(12, 209);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(120, 40);
-            this.button17.TabIndex = 44;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(126, 209);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(120, 40);
-            this.button18.TabIndex = 45;
-            this.button18.Text = "button18";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.Location = new System.Drawing.Point(243, 209);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(120, 40);
-            this.button19.TabIndex = 46;
-            this.button19.Text = "button19";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(359, 210);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(120, 40);
-            this.button20.TabIndex = 47;
-            this.button20.Text = "button20";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(477, 209);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(120, 40);
-            this.button21.TabIndex = 48;
-            this.button21.Text = "button21";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(593, 210);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(120, 40);
-            this.button22.TabIndex = 49;
-            this.button22.Text = "button22";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            this.button23.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.Location = new System.Drawing.Point(706, 210);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(120, 40);
-            this.button23.TabIndex = 50;
-            this.button23.Text = "button23";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.Location = new System.Drawing.Point(823, 210);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(120, 40);
-            this.button24.TabIndex = 51;
-            this.button24.Text = "button24";
-            this.button24.UseVisualStyleBackColor = true;
-            // 
-            // button25
-            // 
-            this.button25.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.Location = new System.Drawing.Point(12, 246);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(120, 40);
-            this.button25.TabIndex = 52;
-            this.button25.Text = "button25";
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            this.button26.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.Location = new System.Drawing.Point(126, 246);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(120, 40);
-            this.button26.TabIndex = 53;
-            this.button26.Text = "button26";
-            this.button26.UseVisualStyleBackColor = true;
-            // 
-            // button27
-            // 
-            this.button27.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.Location = new System.Drawing.Point(243, 246);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(120, 40);
-            this.button27.TabIndex = 54;
-            this.button27.Text = "button27";
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            this.button28.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.Location = new System.Drawing.Point(359, 246);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(120, 40);
-            this.button28.TabIndex = 55;
-            this.button28.Text = "button28";
-            this.button28.UseVisualStyleBackColor = true;
-            // 
-            // button29
-            // 
-            this.button29.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.Location = new System.Drawing.Point(477, 246);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(120, 40);
-            this.button29.TabIndex = 56;
-            this.button29.Text = "button29";
-            this.button29.UseVisualStyleBackColor = true;
-            // 
-            // button30
-            // 
-            this.button30.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.Location = new System.Drawing.Point(593, 246);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(120, 40);
-            this.button30.TabIndex = 57;
-            this.button30.Text = "button30";
-            this.button30.UseVisualStyleBackColor = true;
-            // 
-            // button31
-            // 
-            this.button31.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button31.Location = new System.Drawing.Point(706, 246);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(120, 40);
-            this.button31.TabIndex = 58;
-            this.button31.Text = "button31";
-            this.button31.UseVisualStyleBackColor = true;
-            // 
-            // button32
-            // 
-            this.button32.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.Location = new System.Drawing.Point(823, 246);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(120, 40);
-            this.button32.TabIndex = 59;
-            this.button32.Text = "button32";
-            this.button32.UseVisualStyleBackColor = true;
+            this.lblZ.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblZ_LinkClicked);
+            // 
+            // btnBomComparison
+            // 
+            this.btnBomComparison.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBomComparison.Location = new System.Drawing.Point(12, 135);
+            this.btnBomComparison.Name = "btnBomComparison";
+            this.btnBomComparison.Size = new System.Drawing.Size(120, 40);
+            this.btnBomComparison.TabIndex = 28;
+            this.btnBomComparison.Text = "BOM Comparison";
+            this.btnBomComparison.UseVisualStyleBackColor = true;
+            this.btnBomComparison.Click += new System.EventHandler(this.btnBomComparison_Click);
+            // 
+            // btnCbom
+            // 
+            this.btnCbom.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCbom.Location = new System.Drawing.Point(126, 135);
+            this.btnCbom.Name = "btnCbom";
+            this.btnCbom.Size = new System.Drawing.Size(120, 40);
+            this.btnCbom.TabIndex = 29;
+            this.btnCbom.Text = "CBOM";
+            this.btnCbom.UseVisualStyleBackColor = true;
+            this.btnCbom.Click += new System.EventHandler(this.btnCbom_Click);
+            // 
+            // btnCsrWorkBench
+            // 
+            this.btnCsrWorkBench.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCsrWorkBench.Location = new System.Drawing.Point(243, 135);
+            this.btnCsrWorkBench.Name = "btnCsrWorkBench";
+            this.btnCsrWorkBench.Size = new System.Drawing.Size(120, 40);
+            this.btnCsrWorkBench.TabIndex = 30;
+            this.btnCsrWorkBench.Text = "CSR WorkBench";
+            this.btnCsrWorkBench.UseVisualStyleBackColor = true;
+            this.btnCsrWorkBench.Click += new System.EventHandler(this.btnCsrWorkBench_Click);
+            // 
+            // btnDataExplorer
+            // 
+            this.btnDataExplorer.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDataExplorer.Location = new System.Drawing.Point(359, 135);
+            this.btnDataExplorer.Name = "btnDataExplorer";
+            this.btnDataExplorer.Size = new System.Drawing.Size(120, 40);
+            this.btnDataExplorer.TabIndex = 31;
+            this.btnDataExplorer.Text = "Data Explorer";
+            this.btnDataExplorer.UseVisualStyleBackColor = true;
+            this.btnDataExplorer.Click += new System.EventHandler(this.btnDataExplorer_Click);
+            // 
+            // btnEcm
+            // 
+            this.btnEcm.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEcm.Location = new System.Drawing.Point(477, 135);
+            this.btnEcm.Name = "btnEcm";
+            this.btnEcm.Size = new System.Drawing.Size(120, 40);
+            this.btnEcm.TabIndex = 32;
+            this.btnEcm.Text = "ECM";
+            this.btnEcm.UseVisualStyleBackColor = true;
+            this.btnEcm.Click += new System.EventHandler(this.btnEcm_Click);
+            // 
+            // btnEdpm
+            // 
+            this.btnEdpm.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdpm.Location = new System.Drawing.Point(593, 135);
+            this.btnEdpm.Name = "btnEdpm";
+            this.btnEdpm.Size = new System.Drawing.Size(120, 40);
+            this.btnEdpm.TabIndex = 33;
+            this.btnEdpm.Text = "EDPM";
+            this.btnEdpm.UseVisualStyleBackColor = true;
+            this.btnEdpm.Click += new System.EventHandler(this.btnEdpm_Click);
+            // 
+            // btnFfrCalculator
+            // 
+            this.btnFfrCalculator.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFfrCalculator.Location = new System.Drawing.Point(706, 135);
+            this.btnFfrCalculator.Name = "btnFfrCalculator";
+            this.btnFfrCalculator.Size = new System.Drawing.Size(120, 40);
+            this.btnFfrCalculator.TabIndex = 34;
+            this.btnFfrCalculator.Text = "FFR Calculator";
+            this.btnFfrCalculator.UseVisualStyleBackColor = true;
+            this.btnFfrCalculator.Click += new System.EventHandler(this.btnFfrCalculator_Click);
+            // 
+            // btnFfrQuality
+            // 
+            this.btnFfrQuality.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFfrQuality.Location = new System.Drawing.Point(823, 135);
+            this.btnFfrQuality.Name = "btnFfrQuality";
+            this.btnFfrQuality.Size = new System.Drawing.Size(120, 40);
+            this.btnFfrQuality.TabIndex = 35;
+            this.btnFfrQuality.Text = "FFR Quality";
+            this.btnFfrQuality.UseVisualStyleBackColor = true;
+            this.btnFfrQuality.Click += new System.EventHandler(this.btnFfrQuality_Click);
+            // 
+            // btnFoxPro
+            // 
+            this.btnFoxPro.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFoxPro.Location = new System.Drawing.Point(12, 172);
+            this.btnFoxPro.Name = "btnFoxPro";
+            this.btnFoxPro.Size = new System.Drawing.Size(120, 40);
+            this.btnFoxPro.TabIndex = 36;
+            this.btnFoxPro.Text = "FoxPro";
+            this.btnFoxPro.UseVisualStyleBackColor = true;
+            this.btnFoxPro.Click += new System.EventHandler(this.btnFoxPro_Click);
+            // 
+            // btnInstallBase
+            // 
+            this.btnInstallBase.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInstallBase.Location = new System.Drawing.Point(126, 172);
+            this.btnInstallBase.Name = "btnInstallBase";
+            this.btnInstallBase.Size = new System.Drawing.Size(120, 40);
+            this.btnInstallBase.TabIndex = 37;
+            this.btnInstallBase.Text = "Install Base";
+            this.btnInstallBase.UseVisualStyleBackColor = true;
+            this.btnInstallBase.Click += new System.EventHandler(this.btnInstallBase_Click);
+            // 
+            // btnKeiWebApps
+            // 
+            this.btnKeiWebApps.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKeiWebApps.Location = new System.Drawing.Point(243, 172);
+            this.btnKeiWebApps.Name = "btnKeiWebApps";
+            this.btnKeiWebApps.Size = new System.Drawing.Size(120, 40);
+            this.btnKeiWebApps.TabIndex = 38;
+            this.btnKeiWebApps.Text = "KEI WebApps";
+            this.btnKeiWebApps.UseVisualStyleBackColor = true;
+            this.btnKeiWebApps.Click += new System.EventHandler(this.btnKeiWebApps_Click);
+            // 
+            // btnOmar
+            // 
+            this.btnOmar.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOmar.Location = new System.Drawing.Point(359, 172);
+            this.btnOmar.Name = "btnOmar";
+            this.btnOmar.Size = new System.Drawing.Size(120, 40);
+            this.btnOmar.TabIndex = 39;
+            this.btnOmar.Text = "OMAR";
+            this.btnOmar.UseVisualStyleBackColor = true;
+            this.btnOmar.Click += new System.EventHandler(this.btnOmar_Click);
+            // 
+            // btnOracleMfg
+            // 
+            this.btnOracleMfg.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOracleMfg.Location = new System.Drawing.Point(477, 172);
+            this.btnOracleMfg.Name = "btnOracleMfg";
+            this.btnOracleMfg.Size = new System.Drawing.Size(120, 40);
+            this.btnOracleMfg.TabIndex = 40;
+            this.btnOracleMfg.Text = "Oracle MFG";
+            this.btnOracleMfg.UseVisualStyleBackColor = true;
+            this.btnOracleMfg.Click += new System.EventHandler(this.btnOracleMfg_Click);
+            // 
+            // btnOut
+            // 
+            this.btnOut.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOut.Location = new System.Drawing.Point(593, 172);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(120, 40);
+            this.btnOut.TabIndex = 41;
+            this.btnOut.Text = "OUT";
+            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
+            // 
+            // btnOutQuery
+            // 
+            this.btnOutQuery.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOutQuery.Location = new System.Drawing.Point(706, 172);
+            this.btnOutQuery.Name = "btnOutQuery";
+            this.btnOutQuery.Size = new System.Drawing.Size(120, 40);
+            this.btnOutQuery.TabIndex = 42;
+            this.btnOutQuery.Text = "OUT Query";
+            this.btnOutQuery.UseVisualStyleBackColor = true;
+            this.btnOutQuery.Click += new System.EventHandler(this.btnOutQuery_Click);
+            // 
+            // btnPfListBySwimLane
+            // 
+            this.btnPfListBySwimLane.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPfListBySwimLane.Location = new System.Drawing.Point(823, 172);
+            this.btnPfListBySwimLane.Name = "btnPfListBySwimLane";
+            this.btnPfListBySwimLane.Size = new System.Drawing.Size(120, 40);
+            this.btnPfListBySwimLane.TabIndex = 43;
+            this.btnPfListBySwimLane.Text = "PF List by SwimLane";
+            this.btnPfListBySwimLane.UseVisualStyleBackColor = true;
+            this.btnPfListBySwimLane.Click += new System.EventHandler(this.btnPfListBySwimLane_Click);
+            // 
+            // btnPlsqlDeveloper
+            // 
+            this.btnPlsqlDeveloper.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlsqlDeveloper.Location = new System.Drawing.Point(12, 209);
+            this.btnPlsqlDeveloper.Name = "btnPlsqlDeveloper";
+            this.btnPlsqlDeveloper.Size = new System.Drawing.Size(120, 40);
+            this.btnPlsqlDeveloper.TabIndex = 44;
+            this.btnPlsqlDeveloper.Text = "PLSQL Developer";
+            this.btnPlsqlDeveloper.UseVisualStyleBackColor = true;
+            this.btnPlsqlDeveloper.Click += new System.EventHandler(this.btnPlsqlDeveloper_Click);
+            // 
+            // btnPortfolioPage
+            // 
+            this.btnPortfolioPage.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPortfolioPage.Location = new System.Drawing.Point(126, 209);
+            this.btnPortfolioPage.Name = "btnPortfolioPage";
+            this.btnPortfolioPage.Size = new System.Drawing.Size(120, 40);
+            this.btnPortfolioPage.TabIndex = 45;
+            this.btnPortfolioPage.Text = "Portfolio Page";
+            this.btnPortfolioPage.UseVisualStyleBackColor = true;
+            this.btnPortfolioPage.Click += new System.EventHandler(this.btnPortfolioPage_Click);
+            // 
+            // btnPriceAdmin
+            // 
+            this.btnPriceAdmin.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPriceAdmin.Location = new System.Drawing.Point(243, 209);
+            this.btnPriceAdmin.Name = "btnPriceAdmin";
+            this.btnPriceAdmin.Size = new System.Drawing.Size(120, 40);
+            this.btnPriceAdmin.TabIndex = 46;
+            this.btnPriceAdmin.Text = "Price Admin";
+            this.btnPriceAdmin.UseVisualStyleBackColor = true;
+            this.btnPriceAdmin.Click += new System.EventHandler(this.btnPriceAdmin_Click);
+            // 
+            // btnRpdb
+            // 
+            this.btnRpdb.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRpdb.Location = new System.Drawing.Point(359, 210);
+            this.btnRpdb.Name = "btnRpdb";
+            this.btnRpdb.Size = new System.Drawing.Size(120, 40);
+            this.btnRpdb.TabIndex = 47;
+            this.btnRpdb.Text = "RPDB";
+            this.btnRpdb.UseVisualStyleBackColor = true;
+            this.btnRpdb.Click += new System.EventHandler(this.btnRpdb_Click);
+            // 
+            // btnSpsSharepoint
+            // 
+            this.btnSpsSharepoint.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpsSharepoint.Location = new System.Drawing.Point(477, 209);
+            this.btnSpsSharepoint.Name = "btnSpsSharepoint";
+            this.btnSpsSharepoint.Size = new System.Drawing.Size(120, 40);
+            this.btnSpsSharepoint.TabIndex = 48;
+            this.btnSpsSharepoint.Text = "SPS Sharepoint";
+            this.btnSpsSharepoint.UseVisualStyleBackColor = true;
+            this.btnSpsSharepoint.Click += new System.EventHandler(this.btnSpsSharepoint_Click);
+            // 
+            // btnSqlAvgCalCostProduct
+            // 
+            this.btnSqlAvgCalCostProduct.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSqlAvgCalCostProduct.Location = new System.Drawing.Point(593, 210);
+            this.btnSqlAvgCalCostProduct.Name = "btnSqlAvgCalCostProduct";
+            this.btnSqlAvgCalCostProduct.Size = new System.Drawing.Size(120, 40);
+            this.btnSqlAvgCalCostProduct.TabIndex = 49;
+            this.btnSqlAvgCalCostProduct.Text = "SQL Avg Cal Cost Product";
+            this.btnSqlAvgCalCostProduct.UseVisualStyleBackColor = true;
+            this.btnSqlAvgCalCostProduct.Click += new System.EventHandler(this.btnSqlAvgCalCostProduct_Click);
+            // 
+            // btnSqlCalReturnRateProduct
+            // 
+            this.btnSqlCalReturnRateProduct.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSqlCalReturnRateProduct.Location = new System.Drawing.Point(706, 210);
+            this.btnSqlCalReturnRateProduct.Name = "btnSqlCalReturnRateProduct";
+            this.btnSqlCalReturnRateProduct.Size = new System.Drawing.Size(120, 40);
+            this.btnSqlCalReturnRateProduct.TabIndex = 50;
+            this.btnSqlCalReturnRateProduct.Text = "SQL Cal Return Rate Product";
+            this.btnSqlCalReturnRateProduct.UseVisualStyleBackColor = true;
+            this.btnSqlCalReturnRateProduct.Click += new System.EventHandler(this.btnSqlCalReturnRateProduct_Click);
+            // 
+            // btnSqlInstallBase
+            // 
+            this.btnSqlInstallBase.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSqlInstallBase.Location = new System.Drawing.Point(823, 210);
+            this.btnSqlInstallBase.Name = "btnSqlInstallBase";
+            this.btnSqlInstallBase.Size = new System.Drawing.Size(120, 40);
+            this.btnSqlInstallBase.TabIndex = 51;
+            this.btnSqlInstallBase.Text = "SQL Install Base";
+            this.btnSqlInstallBase.UseVisualStyleBackColor = true;
+            this.btnSqlInstallBase.Click += new System.EventHandler(this.btnSqlInstallBase_Click);
+            // 
+            // btnSqlPartUsage
+            // 
+            this.btnSqlPartUsage.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSqlPartUsage.Location = new System.Drawing.Point(12, 246);
+            this.btnSqlPartUsage.Name = "btnSqlPartUsage";
+            this.btnSqlPartUsage.Size = new System.Drawing.Size(120, 40);
+            this.btnSqlPartUsage.TabIndex = 52;
+            this.btnSqlPartUsage.Text = "SQL Part Usage";
+            this.btnSqlPartUsage.UseVisualStyleBackColor = true;
+            this.btnSqlPartUsage.Click += new System.EventHandler(this.btnSqlPartUsage_Click);
+            // 
+            // btnSqlPartsPricingHistory
+            // 
+            this.btnSqlPartsPricingHistory.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSqlPartsPricingHistory.Location = new System.Drawing.Point(126, 246);
+            this.btnSqlPartsPricingHistory.Name = "btnSqlPartsPricingHistory";
+            this.btnSqlPartsPricingHistory.Size = new System.Drawing.Size(120, 40);
+            this.btnSqlPartsPricingHistory.TabIndex = 53;
+            this.btnSqlPartsPricingHistory.Text = "SQL Parts Pricing History";
+            this.btnSqlPartsPricingHistory.UseVisualStyleBackColor = true;
+            this.btnSqlPartsPricingHistory.Click += new System.EventHandler(this.btnSqlPartsPricingHistory_Click);
+            // 
+            // btnSqlSvcActivityProduct
+            // 
+            this.btnSqlSvcActivityProduct.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSqlSvcActivityProduct.Location = new System.Drawing.Point(243, 246);
+            this.btnSqlSvcActivityProduct.Name = "btnSqlSvcActivityProduct";
+            this.btnSqlSvcActivityProduct.Size = new System.Drawing.Size(120, 40);
+            this.btnSqlSvcActivityProduct.TabIndex = 54;
+            this.btnSqlSvcActivityProduct.Text = "SQL Svc Activity Product";
+            this.btnSqlSvcActivityProduct.UseVisualStyleBackColor = true;
+            this.btnSqlSvcActivityProduct.Click += new System.EventHandler(this.btnSqlSvcActivityProduct_Click);
+            // 
+            // btnSqlSvcContractPricingHistory
+            // 
+            this.btnSqlSvcContractPricingHistory.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSqlSvcContractPricingHistory.Location = new System.Drawing.Point(359, 246);
+            this.btnSqlSvcContractPricingHistory.Name = "btnSqlSvcContractPricingHistory";
+            this.btnSqlSvcContractPricingHistory.Size = new System.Drawing.Size(120, 40);
+            this.btnSqlSvcContractPricingHistory.TabIndex = 55;
+            this.btnSqlSvcContractPricingHistory.Text = "SQL Svc Contract Pricing History";
+            this.btnSqlSvcContractPricingHistory.UseVisualStyleBackColor = true;
+            this.btnSqlSvcContractPricingHistory.Click += new System.EventHandler(this.btnSqlSvcContractPricingHistory_Click);
+            // 
+            // btnSqlSvcPricingHistory
+            // 
+            this.btnSqlSvcPricingHistory.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSqlSvcPricingHistory.Location = new System.Drawing.Point(477, 246);
+            this.btnSqlSvcPricingHistory.Name = "btnSqlSvcPricingHistory";
+            this.btnSqlSvcPricingHistory.Size = new System.Drawing.Size(120, 40);
+            this.btnSqlSvcPricingHistory.TabIndex = 56;
+            this.btnSqlSvcPricingHistory.Text = "SQL Svc Pricing History";
+            this.btnSqlSvcPricingHistory.UseVisualStyleBackColor = true;
+            this.btnSqlSvcPricingHistory.Click += new System.EventHandler(this.btnSqlSvcPricingHistory_Click);
+            // 
+            // btnStockPlacesAndLocations
+            // 
+            this.btnStockPlacesAndLocations.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockPlacesAndLocations.Location = new System.Drawing.Point(593, 246);
+            this.btnStockPlacesAndLocations.Name = "btnStockPlacesAndLocations";
+            this.btnStockPlacesAndLocations.Size = new System.Drawing.Size(120, 40);
+            this.btnStockPlacesAndLocations.TabIndex = 57;
+            this.btnStockPlacesAndLocations.Text = "Stock Places and Locations";
+            this.btnStockPlacesAndLocations.UseVisualStyleBackColor = true;
+            this.btnStockPlacesAndLocations.Click += new System.EventHandler(this.btnStockPlacesAndLocations_Click);
+            // 
+            // btnTekHome
+            // 
+            this.btnTekHome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTekHome.Location = new System.Drawing.Point(706, 246);
+            this.btnTekHome.Name = "btnTekHome";
+            this.btnTekHome.Size = new System.Drawing.Size(120, 40);
+            this.btnTekHome.TabIndex = 58;
+            this.btnTekHome.Text = "Tek Home";
+            this.btnTekHome.UseVisualStyleBackColor = true;
+            this.btnTekHome.Click += new System.EventHandler(this.btnTekHome_Click);
+            // 
+            // btnTekItemQuery
+            // 
+            this.btnTekItemQuery.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTekItemQuery.Location = new System.Drawing.Point(823, 246);
+            this.btnTekItemQuery.Name = "btnTekItemQuery";
+            this.btnTekItemQuery.Size = new System.Drawing.Size(120, 40);
+            this.btnTekItemQuery.TabIndex = 59;
+            this.btnTekItemQuery.Text = "Tek Item Query";
+            this.btnTekItemQuery.UseVisualStyleBackColor = true;
+            this.btnTekItemQuery.Click += new System.EventHandler(this.btnTekItemQuery_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(535, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 19);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Last Searched";
+            // 
+            // btnLastSearched
+            // 
+            this.btnLastSearched.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLastSearched.Location = new System.Drawing.Point(529, 40);
+            this.btnLastSearched.Name = "btnLastSearched";
+            this.btnLastSearched.Size = new System.Drawing.Size(120, 32);
+            this.btnLastSearched.TabIndex = 61;
+            this.btnLastSearched.Text = "Last Searched";
+            this.btnLastSearched.UseVisualStyleBackColor = true;
+            this.btnLastSearched.Click += new System.EventHandler(this.btnLastSearched_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 301);
-            this.Controls.Add(this.button32);
-            this.Controls.Add(this.button31);
-            this.Controls.Add(this.button30);
-            this.Controls.Add(this.button29);
-            this.Controls.Add(this.button28);
-            this.Controls.Add(this.button27);
-            this.Controls.Add(this.button26);
-            this.Controls.Add(this.button25);
-            this.Controls.Add(this.button24);
-            this.Controls.Add(this.button23);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.button20);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLastSearched);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnTekItemQuery);
+            this.Controls.Add(this.btnTekHome);
+            this.Controls.Add(this.btnStockPlacesAndLocations);
+            this.Controls.Add(this.btnSqlSvcPricingHistory);
+            this.Controls.Add(this.btnSqlSvcContractPricingHistory);
+            this.Controls.Add(this.btnSqlSvcActivityProduct);
+            this.Controls.Add(this.btnSqlPartsPricingHistory);
+            this.Controls.Add(this.btnSqlPartUsage);
+            this.Controls.Add(this.btnSqlInstallBase);
+            this.Controls.Add(this.btnSqlCalReturnRateProduct);
+            this.Controls.Add(this.btnSqlAvgCalCostProduct);
+            this.Controls.Add(this.btnSpsSharepoint);
+            this.Controls.Add(this.btnRpdb);
+            this.Controls.Add(this.btnPriceAdmin);
+            this.Controls.Add(this.btnPortfolioPage);
+            this.Controls.Add(this.btnPlsqlDeveloper);
+            this.Controls.Add(this.btnPfListBySwimLane);
+            this.Controls.Add(this.btnOutQuery);
+            this.Controls.Add(this.btnOut);
+            this.Controls.Add(this.btnOracleMfg);
+            this.Controls.Add(this.btnOmar);
+            this.Controls.Add(this.btnKeiWebApps);
+            this.Controls.Add(this.btnInstallBase);
+            this.Controls.Add(this.btnFoxPro);
+            this.Controls.Add(this.btnFfrQuality);
+            this.Controls.Add(this.btnFfrCalculator);
+            this.Controls.Add(this.btnEdpm);
+            this.Controls.Add(this.btnEcm);
+            this.Controls.Add(this.btnDataExplorer);
+            this.Controls.Add(this.btnCsrWorkBench);
+            this.Controls.Add(this.btnCbom);
+            this.Controls.Add(this.btnBomComparison);
             this.Controls.Add(this.lblZ);
             this.Controls.Add(this.lblY);
             this.Controls.Add(this.lblX);
@@ -779,7 +863,7 @@
             this.Controls.Add(this.lblB);
             this.Controls.Add(this.lblA);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearch);
             this.Name = "Form1";
             this.Text = "SPS TOOLBOX";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -790,7 +874,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lblA;
         private System.Windows.Forms.LinkLabel lblB;
@@ -818,38 +902,40 @@
         private System.Windows.Forms.LinkLabel lblX;
         private System.Windows.Forms.LinkLabel lblY;
         private System.Windows.Forms.LinkLabel lblZ;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button btnBomComparison;
+        private System.Windows.Forms.Button btnCbom;
+        private System.Windows.Forms.Button btnCsrWorkBench;
+        private System.Windows.Forms.Button btnDataExplorer;
+        private System.Windows.Forms.Button btnEcm;
+        private System.Windows.Forms.Button btnEdpm;
+        private System.Windows.Forms.Button btnFfrCalculator;
+        private System.Windows.Forms.Button btnFfrQuality;
+        private System.Windows.Forms.Button btnFoxPro;
+        private System.Windows.Forms.Button btnInstallBase;
+        private System.Windows.Forms.Button btnKeiWebApps;
+        private System.Windows.Forms.Button btnOmar;
+        private System.Windows.Forms.Button btnOracleMfg;
+        private System.Windows.Forms.Button btnOut;
+        private System.Windows.Forms.Button btnOutQuery;
+        private System.Windows.Forms.Button btnPfListBySwimLane;
+        private System.Windows.Forms.Button btnPlsqlDeveloper;
+        private System.Windows.Forms.Button btnPortfolioPage;
+        private System.Windows.Forms.Button btnPriceAdmin;
+        private System.Windows.Forms.Button btnRpdb;
+        private System.Windows.Forms.Button btnSpsSharepoint;
+        private System.Windows.Forms.Button btnSqlAvgCalCostProduct;
+        private System.Windows.Forms.Button btnSqlCalReturnRateProduct;
+        private System.Windows.Forms.Button btnSqlInstallBase;
+        private System.Windows.Forms.Button btnSqlPartUsage;
+        private System.Windows.Forms.Button btnSqlPartsPricingHistory;
+        private System.Windows.Forms.Button btnSqlSvcActivityProduct;
+        private System.Windows.Forms.Button btnSqlSvcContractPricingHistory;
+        private System.Windows.Forms.Button btnSqlSvcPricingHistory;
+        private System.Windows.Forms.Button btnStockPlacesAndLocations;
+        private System.Windows.Forms.Button btnTekHome;
+        private System.Windows.Forms.Button btnTekItemQuery;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnLastSearched;
     }
 }
 
