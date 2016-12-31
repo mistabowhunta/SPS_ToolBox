@@ -180,7 +180,7 @@ namespace SPS_ToolBox
 
         }
 
-        public void btnBomComparison_Click(object sender, EventArgs e)
+        private void btnBomComparison_Click(object sender, EventArgs e)
         {
             
         }
@@ -195,9 +195,49 @@ namespace SPS_ToolBox
             Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
         }
 
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+        bool launched = false;
+
         private void btnDataExplorer_Click(object sender, EventArgs e)
         {
+            
 
+            Process[] processList = Process.GetProcesses();
+
+            foreach (Process theProcess in processList)
+            {
+                ShowWindow(theProcess.MainWindowHandle, 2);
+            }
+
+            foreach (Process theProcess in processList)
+            {
+                if (theProcess.MainWindowTitle.ToUpper().Contains("death eater – Etsy".ToUpper()))
+                {
+                    ShowWindow(theProcess.MainWindowHandle, 9);
+                    launched = true;
+                }
+            }
+            //http://stackoverflow.com/questions/15638531/switch-application-in-c-sharp-like-task-manager
+
+
+            //    //Process.Start("IExplore.exe", "https://en.wikipedia.org/wiki/George");
+            //    bool boolFoundIt = false;
+            //    while (!boolFoundIt == false) ;
+            //    {
+            //        //SendKeys.SendWait("%{TAB}");
+            //        //ShellWindows shellWindows = new ShellWindows();
+            //        IntPtr hWnd = IntPtr.Zero;
+            //        foreach(Process pList in Process.GetProcesses())
+            //        {
+            //            if (pList.MainWindowTitle.Contains("Wikipedia"))
+            //            {
+            //                hWnd = pList.MainWindowHandle;
+            //                boolFoundIt = true;
+            //            }
+            //        }
+
+            //    }
         }
 
         private void btnEcm_Click(object sender, EventArgs e)
