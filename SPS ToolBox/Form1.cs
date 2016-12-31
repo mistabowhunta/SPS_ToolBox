@@ -10,15 +10,29 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
 using SHDocVw;
+using System.Runtime.InteropServices;
 
 namespace SPS_ToolBox
 {
     public partial class Form1 : Form
     {
+
+       public List<Button> btnListButtons = new List<Button>();
         
         public Form1()
         {
             InitializeComponent();
+
+            // Adding all buttons to btnListButtons. When user clicks "A" all buttons.text starting with "A" will be highlit
+            btnListButtons.Add(btnBomComparison); btnListButtons.Add(btnCbom); btnListButtons.Add(btnCsrWorkBench); btnListButtons.Add(btnDataExplorer);
+            btnListButtons.Add(btnEcm); btnListButtons.Add(btnEdpm); btnListButtons.Add(btnFfrCalculator); btnListButtons.Add(btnFfrQuality);
+            btnListButtons.Add(btnFoxPro); btnListButtons.Add(btnInstallBase); btnListButtons.Add(btnKeiWebApps); btnListButtons.Add(btnOmar);
+            btnListButtons.Add(btnOracleMfg); btnListButtons.Add(btnOut); btnListButtons.Add(btnOutQuery); btnListButtons.Add(btnPfListBySwimLane);
+            btnListButtons.Add(btnPlsqlDeveloper); btnListButtons.Add(btnPortfolioPage); btnListButtons.Add(btnPriceAdmin); btnListButtons.Add(btnRpdb);
+            btnListButtons.Add(btnSpsSharepoint); btnListButtons.Add(btnSqlAvgCalCostProduct); btnListButtons.Add(btnSqlCalReturnRateProduct);
+            btnListButtons.Add(btnSqlInstallBase); btnListButtons.Add(btnSqlPartUsage); btnListButtons.Add(btnSqlPartsPricingHistory);
+            btnListButtons.Add(btnSqlSvcActivityProduct); btnListButtons.Add(btnSqlSvcContractPricingHistory); btnListButtons.Add(btnSqlSvcPricingHistory);
+            btnListButtons.Add(btnStockPlacesAndLocations); btnListButtons.Add(btnTekHome); btnListButtons.Add(btnTekItemQuery);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,12 +42,12 @@ namespace SPS_ToolBox
 
         private void lblA_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Highlighting highlight = new Highlighting("A");  
         }
 
         private void lblB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Highlighting highlight = new Highlighting("B");
         }
 
         private void lblC_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -165,44 +179,20 @@ namespace SPS_ToolBox
         {
 
         }
-        
-        private void btnBomComparison_Click(object sender, EventArgs e)
+
+        public void btnBomComparison_Click(object sender, EventArgs e)
         {
-            ShellWindows shellWindows = new ShellWindows();
-            string filename;
             
-            if (shellWindows.Count > 0)
-            {
-                foreach (InternetExplorer ie in shellWindows)
-                {
-                    filename = Path.GetFileNameWithoutExtension(ie.FullName).ToLower();
-                    if (filename.Equals("iexplore"))
-                    {
-                        string[] urlParts = (ie.LocationURL.ToString()).Split('/');
-                        string website = urlParts[2];
-                        if (website.Contains("wikipedia"))
-                        {
-                            shellWindows.Show(ie) ("https://en.wikipedia.org/wiki/Home");
-                            //{ Process.Start("IExplore.exe", "https://en.wikipedia.org/wiki/Home"); }
-                        }
-                    }
-                }
-               
-
-            }
-            else { Process.Start("IExplore.exe", "https://en.wikipedia.org/wiki/Home"); }
-
-           
         }
 
         private void btnCbom_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnCsrWorkBench_Click(object sender, EventArgs e)
         {
-
+            Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
         }
 
         private void btnDataExplorer_Click(object sender, EventArgs e)
@@ -287,7 +277,7 @@ namespace SPS_ToolBox
 
         private void btnRpdb_Click(object sender, EventArgs e)
         {
-
+            { Process.Start("IExplore.exe", "http://owebprd10.tek.com/tekrpdb/rpdb_query.item"); }
         }
 
         private void btnSpsSharepoint_Click(object sender, EventArgs e)

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+//using SPS_ToolBox;
 
 namespace SPS_ToolBox_Mini
 {
@@ -17,7 +18,13 @@ namespace SPS_ToolBox_Mini
         public Form2()
         {
             InitializeComponent();
+            
         }
+        private void Form2_Load(object sender, EventArgs e)
+        {
+          
+        }
+       
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
