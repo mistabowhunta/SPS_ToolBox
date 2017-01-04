@@ -182,7 +182,7 @@ namespace SPS_ToolBox
 
         private void btnBomComparison_Click(object sender, EventArgs e)
         {
-            
+            Process.Start("IExplore.exe", "https://en.wikipedia.org/wiki/Hater");
         }
 
         private void btnCbom_Click(object sender, EventArgs e)
@@ -205,16 +205,20 @@ namespace SPS_ToolBox
 
             Process[] processList = Process.GetProcesses();
 
+
             foreach (Process theProcess in processList)
             {
-                ShowWindow(theProcess.MainWindowHandle, 2);
+                
+                    ShowWindow(theProcess.MainWindowHandle, 0);
             }
 
             foreach (Process theProcess in processList)
             {
-                if (theProcess.MainWindowTitle.ToUpper().Contains("death eater – Etsy".ToUpper()))
+                if (theProcess.MainWindowTitle.ToUpper().Contains("Hater - Wikipedia".ToUpper()))
                 {
                     ShowWindow(theProcess.MainWindowHandle, 9);
+                   
+                    
                     launched = true;
                 }
             }
