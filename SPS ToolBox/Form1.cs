@@ -197,78 +197,31 @@ namespace SPS_ToolBox
             Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
         }
 
-        //[DllImport("user32.dll")]
-        //static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-        //bool launched = false;
-        //private void BringToForeground(IntPtr extHandle)
-        //{
-        //    if (IsIconic(extHandle))
-        //    {
-        //        ShowWindow(extHandle, SW_RESTORE);
-        //    }
-        //    SetForegroundWindow(extHandle);
-        //}
-//        [DllImport("user32")]
-//        public static extern void keybd_event(byte bVk, byte bScan, int dwFlags, int
-//dwExtraInfo);
-//        private const byte VK_MENU = 0x12;
-//        private const byte VK_TAB = 0x09;
-//        private const int KEYEVENTF_EXTENDEDKEY = 0x01;
-//        private const int KEYEVENTF_KEYUP = 0x02;
-        public void PressAButton()
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+       
+         private void btnDataExplorer_Click(object sender, EventArgs e)
         {
-            
-
-            
-        }
-
-        private void btnDataExplorer_Click(object sender, EventArgs e)
-        {
+            Process[] ps = Process.GetProcessesByName("IExplore"); // <-- no path, no extension!
            
-            
-            //keybd_event(VK_MENU, 0, 0, 0);
-            //keybd_event(VK_TAB, 0, 0, 0);
-            //System.Threading.Thread.Sleep(1000);
-            //keybd_event(VK_TAB, 0, 0, 0);
-            //System.Threading.Thread.Sleep(1000);
-            //keybd_event(VK_MENU, 0, KEYEVENTF_KEYUP, 0);
-            //keybd_event(VK_MENU, 0, KEYEVENTF_KEYUP, 0);
-
-            //Process[] ps = Process.GetProcessesByName("IExplore"); // <-- no path, no extension!
-
-            //foreach(Process theProcess in ps)
-            //{
-            //    if (ps.Length > 0)
-            //    {
-            //        MessageBox.Show(ps[0].MainWindowTitle);
-
-            //        BringToForeground(ps[0].MainWindowHandle);
-            //    }
-            //}
+            foreach (Process theProcess in ps)
+            {
+                //MessageBox.Show(theProcess.MainWindowTitle);
+               
+                if (theProcess.MainWindowTitle == "George - Wikipedia - Internet Explorer")
+                {
+                   
+                  // ShowWindow(theProcess.MainWindowHandle, 9);
+                  //ps[i].CloseMainWindow();
+                    theProcess.CloseMainWindow();
+                    Process.Start("IExplore.exe", "http://www.livescience.com/20296-isaac-newton.html");
+                    
+                }
+            }
 
             //Process[] processList = Process.GetProcesses();
 
-<<<<<<< HEAD
-            Process[] processList = Process.GetProcesses();
 
-
-            foreach (Process theProcess in processList)
-            {
-                
-                    ShowWindow(theProcess.MainWindowHandle, 0);
-            }
-
-            foreach (Process theProcess in processList)
-            {
-                if (theProcess.MainWindowTitle.ToUpper().Contains("Hater - Wikipedia".ToUpper()))
-                {
-                    ShowWindow(theProcess.MainWindowHandle, 9);
-                   
-                    
-                    launched = true;
-                }
-            }
-=======
             //foreach (Process theProcess in processList)
             //{
             //    ShowWindow(theProcess.MainWindowHandle, 2);
@@ -282,7 +235,7 @@ namespace SPS_ToolBox
             //        launched = true;
             //    }
             //}
->>>>>>> origin/master
+
             //http://stackoverflow.com/questions/15638531/switch-application-in-c-sharp-like-task-manager
 
 
