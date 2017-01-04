@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
 using SHDocVw;
-using System.Runtime.InteropServices;
 
 
 namespace SPS_ToolBox
@@ -177,6 +176,8 @@ namespace SPS_ToolBox
 
         }
 
+        // For all buttons listed below I am first iterating through all open Internet Explorer windows to see if the user already has the website open.
+        // If the user has the website open, it will be closed and a new insance of IE will start
         private void btnLastSearched_Click(object sender, EventArgs e)
         {
 
@@ -197,65 +198,37 @@ namespace SPS_ToolBox
             Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
         }
 
-        [DllImport("user32.dll")]
-        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-       
-         private void btnDataExplorer_Click(object sender, EventArgs e)
+        private void btnDataExplorer_Click(object sender, EventArgs e)
         {
-            Process[] ps = Process.GetProcessesByName("IExplore"); // <-- no path, no extension!
-           
-            foreach (Process theProcess in ps)
+            //Opening a new instance of all the windows currently open
+            ShellWindows shellWindows = new ShellWindows();
+            string filename;
+
+            //If there are no shellWindows open, start a new instance of IE
+            if (shellWindows.Count > 0)
             {
-                //MessageBox.Show(theProcess.MainWindowTitle);
-               
-                if (theProcess.MainWindowTitle == "George - Wikipedia - Internet Explorer")
+                foreach (InternetExplorer ie in shellWindows)
                 {
-                   
-                  // ShowWindow(theProcess.MainWindowHandle, 9);
-                  //ps[i].CloseMainWindow();
-                    theProcess.CloseMainWindow();
-                    Process.Start("IExplore.exe", "http://www.livescience.com/20296-isaac-newton.html");
-                    
+                    filename = Path.GetFileNameWithoutExtension(ie.FullName).ToLower();
+                    if (filename.Equals("iexplore"))
+                    {
+                        string website = ie.LocationURL.ToString();
+
+                        //Enter website that needs to close if it is already open
+                        if (website.Contains("sso/jsp/login-tek.jsp"))
+                        {
+                            ie.Quit();
+                            //Enter new instance of website that just closed
+                            Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
+                        }
+                    }
                 }
             }
-
-            //Process[] processList = Process.GetProcesses();
-
-
-            //foreach (Process theProcess in processList)
-            //{
-            //    ShowWindow(theProcess.MainWindowHandle, 2);
-            //}
-
-            //foreach (Process theProcess in processList)
-            //{
-            //    if (theProcess.MainWindowTitle.ToUpper().Contains("death eater – Etsy".ToUpper()))
-            //    {
-            //        ShowWindow(theProcess.MainWindowHandle, 9);
-            //        launched = true;
-            //    }
-            //}
-
-            //http://stackoverflow.com/questions/15638531/switch-application-in-c-sharp-like-task-manager
-
-
-            //    //Process.Start("IExplore.exe", "https://en.wikipedia.org/wiki/George");
-            //    bool boolFoundIt = false;
-            //    while (!boolFoundIt == false) ;
-            //    {
-            //        //SendKeys.SendWait("%{TAB}");
-            //        //ShellWindows shellWindows = new ShellWindows();
-            //        IntPtr hWnd = IntPtr.Zero;
-            //        foreach(Process pList in Process.GetProcesses())
-            //        {
-            //            if (pList.MainWindowTitle.Contains("Wikipedia"))
-            //            {
-            //                hWnd = pList.MainWindowHandle;
-            //                boolFoundIt = true;
-            //            }
-            //        }
-
-            //    }
+            // There are no shellwindows open so create a new instance of IE
+            else
+            {
+                Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
+            }
         }
 
         private void btnEcm_Click(object sender, EventArgs e)
@@ -399,3 +372,8 @@ namespace SPS_ToolBox
         }
     }
 }
+
+//NOTES
+// Parsing out URL's by putting them into array
+//string[] urlParts = (ie.LocationURL.ToString()).Split('/');
+//string website = urlParts[2];
