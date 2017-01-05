@@ -41,34 +41,89 @@ namespace SPS_ToolBox
 
         }
 
+        //When user clicks index letter, all buttons starting with that letter will highlight red
         private void lblA_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Highlighting highlight = new Highlighting("A");  
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight;
+
+                if (element.Text.StartsWith("A"))
+                {
+                    element.BackColor = Color.Red;
+                }
+            }
         }
 
         private void lblB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Highlighting highlight = new Highlighting("B");
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight;
+
+                if (element.Text.StartsWith("B"))
+                {
+                    element.BackColor = Color.Red;
+                }
+            }
         }
 
         private void lblC_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight;
 
+                if (element.Text.StartsWith("C"))
+                {
+                    element.BackColor = Color.Red;
+                }
+            }
         }
 
         private void lblD_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight;
 
+                if (element.Text.StartsWith("D"))
+                {
+                    element.BackColor = Color.Red;
+                }
+            }
         }
 
         private void lblE_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight;
 
+                if (element.Text.StartsWith("E"))
+                {
+                    element.BackColor = Color.Red;
+                }
+            }
         }
 
         private void lblF_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight;
 
+                if (element.Text.StartsWith("F"))
+                {
+                    element.BackColor = Color.Red;
+                }
+            }
         }
 
         private void lblG_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -185,80 +240,49 @@ namespace SPS_ToolBox
 
         private void btnBomComparison_Click(object sender, EventArgs e)
         {
-            Process.Start("IExplore.exe", "https://en.wikipedia.org/wiki/Hater");
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnCbom_Click(object sender, EventArgs e)
         {
-            
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnCsrWorkBench_Click(object sender, EventArgs e)
         {
-            Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnDataExplorer_Click(object sender, EventArgs e)
         {
-            //Opening a new instance of all the windows currently open
-            ShellWindows shellWindows = new ShellWindows();
-            string filename;
-
-            //If there are no shellWindows open, start a new instance of IE
-            if (shellWindows.Count > 0)
-            {
-                foreach (InternetExplorer ie in shellWindows)
-                {
-                    filename = Path.GetFileNameWithoutExtension(ie.FullName).ToLower();
-                    if (filename.Equals("iexplore"))
-                    {
-                        string website = ie.LocationURL.ToString();
-
-                        //Enter website that needs to close if it is already open
-                        if (website.Contains("sso/jsp/login-tek.jsp"))
-                        {
-                            //Giving the user a choice if they want to close the existing IE instance
-                            DialogResult dialogResult = MessageBox.Show("There is already an instance of " + btnDataExplorer.Text + ". Close it?", "Close " + btnDataExplorer.Text + "?", 
-                                MessageBoxButtons.YesNo);
-                            if(dialogResult == DialogResult.Yes)
-                            {
-                                ie.Quit();
-                                //Enter new instance of website that just closed
-                                Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
-                            }
-                           else if(dialogResult == DialogResult.No)
-                            {
-                                Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
-                            }
-                        }
-                    }
-                }
-            }
-            // There are no shellwindows open so create a new instance of IE
-            else
-            {
-                Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
-            }
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnEcm_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnEdpm_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnFfrCalculator_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnFfrQuality_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnFoxPro_Click(object sender, EventArgs e)
@@ -268,32 +292,38 @@ namespace SPS_ToolBox
 
         private void btnInstallBase_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnKeiWebApps_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnOmar_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnOracleMfg_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnOut_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnOutQuery_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnPfListBySwimLane_Click(object sender, EventArgs e)
@@ -308,22 +338,26 @@ namespace SPS_ToolBox
 
         private void btnPortfolioPage_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnPriceAdmin_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnRpdb_Click(object sender, EventArgs e)
         {
-            { Process.Start("IExplore.exe", "http://owebprd10.tek.com/tekrpdb/rpdb_query.item"); }
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnSpsSharepoint_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnSqlAvgCalCostProduct_Click(object sender, EventArgs e)
@@ -368,17 +402,20 @@ namespace SPS_ToolBox
 
         private void btnStockPlacesAndLocations_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnTekHome_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
 
         private void btnTekItemQuery_Click(object sender, EventArgs e)
         {
-
+            //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
+            IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
         }
     }
 }

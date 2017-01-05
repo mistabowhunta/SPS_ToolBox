@@ -18,13 +18,13 @@ namespace SPS_ToolBox_Mini
         public Form2()
         {
             InitializeComponent();
-            
+
         }
         private void Form2_Load(object sender, EventArgs e)
         {
-          
+
         }
-       
+
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
