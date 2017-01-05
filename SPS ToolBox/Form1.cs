@@ -217,9 +217,19 @@ namespace SPS_ToolBox
                         //Enter website that needs to close if it is already open
                         if (website.Contains("sso/jsp/login-tek.jsp"))
                         {
-                            ie.Quit();
-                            //Enter new instance of website that just closed
-                            Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
+                            //Giving the user a choice if they want to close the existing IE instance
+                            DialogResult dialogResult = MessageBox.Show("There is already an instance of " + btnDataExplorer.Text + ". Close it?", "Close " + btnDataExplorer.Text + "?", 
+                                MessageBoxButtons.YesNo);
+                            if(dialogResult == DialogResult.Yes)
+                            {
+                                ie.Quit();
+                                //Enter new instance of website that just closed
+                                Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
+                            }
+                           else if(dialogResult == DialogResult.No)
+                            {
+                                Process.Start("IExplore.exe", "http://owebprd2.tek.com/svcTechWorkbench/TechWorkbench.jsp");
+                            }
                         }
                     }
                 }
@@ -377,3 +387,5 @@ namespace SPS_ToolBox
 // Parsing out URL's by putting them into array
 //string[] urlParts = (ie.LocationURL.ToString()).Split('/');
 //string website = urlParts[2];
+
+// data Explorer: http://tekprd34.bv.tek.com:7780/sso/jsp/login-tek.jsp?site2pstoretoken=v1.4~1933623B~8A0D13911343E1A645E0355535B41BDCB578858B9F0E0DBE85F9BD2646BB69A0B13D8D3413D74ACA1652900D998ADB8F368DAC76E4B52112B8A223720BE2B5B0FE7D3CC7675085E45F12CA3C1C3BDC301D5CE763ED449C43BE3C205E5BEB4908653C8208C49FFD002D7D6868DC0304D335690DC71D55419D9777BE59A6BE7E079C765B45F0990731F83DEA5CE33E44A2E1C3B1EA881D16C39B88CD274ABCE2CF42F60F6B4FB730BDC0CC0E786AF383DAF96E1F4439A36D2FFD1157A61DDE2C7D61170A27AC0A97516826A4E7A84E7223057CF79346A53445&p_error_code=&p_submit_url=http%3A%2F%2Ftekprd34.bv.tek.com%3A7780%2Fsso%2Fauth&p_cancel_url=http%3A%2F%2Fowebprd2.tek.com%3A7779&ssousername=
