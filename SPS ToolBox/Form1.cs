@@ -17,8 +17,7 @@ namespace SPS_ToolBox
     public partial class Form1 : Form
     {
 
-       public List<Button> btnListButtons = new List<Button>();
-        
+        public List<Button> btnListButtons = new List<Button>();
 
         public Form1()
         {
@@ -278,209 +277,318 @@ namespace SPS_ToolBox
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            //Highlighting all buttons matching user's text
+ 
+            //Storing every letter into a string list
             List<string> strTxtSearch = new List<string>();
             strTxtSearch.Add(txtSearch.Text.ToLower());
-            int intLetterTracker = 0;
-            foreach (Button element in btnListButtons)
+
+            //User can't have 2 spaces in textbox
+            if (txtSearch.Text.Contains("  "))
             {
-                intLetterTracker++;
-                if (element.Text.ToLower() == strTxtSearch[0])
+                //Trimming the end of textbox to get rid of the extra space user entered
+                txtSearch.Text = txtSearch.Text.TrimEnd(txtSearch.Text[txtSearch.Text.Length - 1]);
+
+                //Adding one space back to string so still has one space
+                txtSearch.Text += " ";
+
+                //Trimming the end of strTxtSearch to get rid of the extra space user entered
+                strTxtSearch[0] = strTxtSearch[0].TrimEnd(strTxtSearch[0][strTxtSearch[0].Length - 1]);
+
+                //Adding one space back to string so still has one space
+                strTxtSearch[0] += " ";
+
+                //Setting the cursor to the end of the users already entered string
+                txtSearch.SelectionStart = txtSearch.Text.Length;
+      
+            }
+
+            //Preventing user from entering a space at the beggining of text 
+            else if (txtSearch.Text.Contains(" ") && (strTxtSearch[0] == " "))
+            {
+                //Trimming the end of textbox to get rid of the extra space user entered
+                txtSearch.Text = txtSearch.Text.TrimEnd(txtSearch.Text[txtSearch.Text.Length - 1]);
+
+                //Trimming the end of strTxtSearch to get rid of the extra space user entered
+                strTxtSearch[0] = strTxtSearch[0].TrimEnd(strTxtSearch[0][strTxtSearch[0].Length - 1]);
+
+                //Setting the cursor back to the beginning
+                txtSearch.SelectionStart = txtSearch.Text.Length;
+            }
+
+            //In case user deletes all text need to change all backcolor back to original color, otherwise all buttons turn red
+            else if (strTxtSearch[0] == "") { foreach(Button element in btnListButtons) { element.BackColor = SystemColors.ControlLightLight; } }
+            else 
+            {
+                foreach (Button element in btnListButtons)
                 {
-                    element.BackColor = Color.Red;
-                    if (strTxtSearch.Count > 0)
-                    {
-                        strTxtSearch[0] += strTxtSearch[1];
-                    }
-                   //ISAAC need to figure out how to highlight all buttons that match users input
+                    element.BackColor = SystemColors.ControlLightLight;
+                    if (element.Text.ToLower().StartsWith(strTxtSearch[0].ToLower())) { element.BackColor = Color.Red; }
                 }
             }
         }
 
         // For all buttons listed below I am first iterating through all open Internet Explorer windows to see if the user already has the website open.
         // If the user has the website open, it will be closed and a new insance of IE will start
-        private void btnLastSearched_Click(object sender, EventArgs e)
+        private void btnLastClicked_Click(object sender, EventArgs e)
         {
-
+            //Captures the last button user clicked and then enables the "LastClicked" button to click the user's last clicked button
+            foreach (Button element in btnListButtons)
+            {
+                if (element.Text == btnLastClicked.Text) { element.PerformClick(); }
+            }
         }
 
         private void btnBomComparison_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnBomComparison.Text;
         }
 
         private void btnCbom_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnCbom.Text;
         }
 
         private void btnCsrWorkBench_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnCsrWorkBench.Text;
         }
 
         private void btnDataExplorer_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnDataExplorer.Text;
         }
 
         private void btnEcm_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnEcm.Text;
         }
 
         private void btnEdpm_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnEdpm.Text;
         }
 
         private void btnFfrCalculator_Click(object sender, EventArgs e)
         {
-            
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnFfrCalculator.Text;
         }
 
         private void btnFfrQuality_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnFfrQuality.Text;
         }
 
         private void btnFoxPro_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnFoxPro.Text;
         }
 
         private void btnInstallBase_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnInstallBase.Text;
         }
 
         private void btnKeiWebApps_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnKeiWebApps.Text;
         }
 
         private void btnOmar_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnOmar.Text;
         }
 
         private void btnOracleMfg_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnOracleMfg.Text;
         }
 
         private void btnOut_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnOut.Text;
         }
 
         private void btnOutQuery_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnOutQuery.Text;
         }
 
         private void btnPfListBySwimLane_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnPfListBySwimLane.Text;
         }
 
         private void btnPlsqlDeveloper_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnPlsqlDeveloper.Text;
         }
 
         private void btnPortfolioPage_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnPortfolioPage.Text;
         }
 
         private void btnPriceAdmin_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnPriceAdmin.Text;
         }
 
         private void btnRpdb_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnRpdb.Text;
         }
 
         private void btnSpsSharepoint_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnSpsSharepoint.Text;
         }
 
         private void btnSqlAvgCalCostProduct_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnSqlAvgCalCostProduct.Text;
         }
 
         private void btnSqlCalReturnRateProduct_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnSqlCalReturnRateProduct.Text;
         }
 
         private void btnSqlInstallBase_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnSqlInstallBase.Text;
         }
 
         private void btnSqlPartUsage_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnSqlPartUsage.Text;
         }
 
         private void btnSqlPartsPricingHistory_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnSqlPartsPricingHistory.Text;
         }
 
         private void btnSqlSvcActivityProduct_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnSqlSvcActivityProduct.Text;
         }
 
         private void btnSqlSvcContractPricingHistory_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnSqlSvcContractPricingHistory.Text;
         }
 
         private void btnSqlSvcPricingHistory_Click(object sender, EventArgs e)
         {
-
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnSqlSvcPricingHistory.Text;
         }
 
         private void btnStockPlacesAndLocations_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnStockPlacesAndLocations.Text;
         }
 
         private void btnTekHome_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnTekHome.Text;
         }
 
         private void btnTekItemQuery_Click(object sender, EventArgs e)
         {
             //Sending strings to IEHandling class: url contains, button text, and URL that button corresponds to
             IEHandling iehandling = new IEHandling("wikipedia.org/wiki/George", btnDataExplorer.Text, "https://en.wikipedia.org/wiki/George");
+
+            //Setting Last Click button text to this button text so user knows the last button they clicked
+            btnLastClicked.Text = btnTekItemQuery.Text;
         }
     }
 }

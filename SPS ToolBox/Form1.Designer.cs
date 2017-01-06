@@ -89,7 +89,7 @@
             this.btnTekHome = new System.Windows.Forms.Button();
             this.btnTekItemQuery = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnLastSearched = new System.Windows.Forms.Button();
+            this.btnLastClicked = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -98,7 +98,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(687, 40);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtSearch.Size = new System.Drawing.Size(256, 32);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -107,7 +107,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(861, 9);
+            this.label1.Location = new System.Drawing.Point(682, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 28);
             this.label1.TabIndex = 1;
@@ -813,23 +813,23 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(535, 17);
+            this.label2.Location = new System.Drawing.Point(12, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 19);
+            this.label2.Size = new System.Drawing.Size(91, 19);
             this.label2.TabIndex = 60;
-            this.label2.Text = "Last Searched";
+            this.label2.Text = "Last Clicked";
             // 
-            // btnLastSearched
+            // btnLastClicked
             // 
-            this.btnLastSearched.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLastSearched.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLastSearched.Location = new System.Drawing.Point(529, 40);
-            this.btnLastSearched.Name = "btnLastSearched";
-            this.btnLastSearched.Size = new System.Drawing.Size(120, 32);
-            this.btnLastSearched.TabIndex = 61;
-            this.btnLastSearched.Text = "Last Searched";
-            this.btnLastSearched.UseVisualStyleBackColor = false;
-            this.btnLastSearched.Click += new System.EventHandler(this.btnLastSearched_Click);
+            this.btnLastClicked.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLastClicked.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLastClicked.Location = new System.Drawing.Point(12, 32);
+            this.btnLastClicked.Name = "btnLastClicked";
+            this.btnLastClicked.Size = new System.Drawing.Size(120, 40);
+            this.btnLastClicked.TabIndex = 61;
+            this.btnLastClicked.Text = "Last Clicked";
+            this.btnLastClicked.UseVisualStyleBackColor = false;
+            this.btnLastClicked.Click += new System.EventHandler(this.btnLastClicked_Click);
             // 
             // Form1
             // 
@@ -837,7 +837,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(957, 301);
-            this.Controls.Add(this.btnLastSearched);
+            this.Controls.Add(this.btnLastClicked);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnTekItemQuery);
             this.Controls.Add(this.btnTekHome);
@@ -972,7 +972,7 @@
         private System.Windows.Forms.Button btnTekHome;
         private System.Windows.Forms.Button btnTekItemQuery;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnLastSearched;
+        private System.Windows.Forms.Button btnLastClicked;
     }
 }
 
