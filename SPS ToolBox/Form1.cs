@@ -47,12 +47,7 @@ namespace SPS_ToolBox
             foreach (Button element in btnListButtons)
             {
                 //Changing all buttons back to normal color then highlighting user selected letter
-                element.BackColor = SystemColors.ControlLightLight;
-
-                if (element.Text.StartsWith("A"))
-                {
-                    element.BackColor = Color.Red;
-                }
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("A")) { element.BackColor = Color.Red; }
             }
         }
 
@@ -61,12 +56,7 @@ namespace SPS_ToolBox
             foreach (Button element in btnListButtons)
             {
                 //Changing all buttons back to normal color then highlighting user selected letter
-                element.BackColor = SystemColors.ControlLightLight;
-
-                if (element.Text.StartsWith("B"))
-                {
-                    element.BackColor = Color.Red;
-                }
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("B")) { element.BackColor = Color.Red; }
             }
         }
 
@@ -75,12 +65,7 @@ namespace SPS_ToolBox
             foreach (Button element in btnListButtons)
             {
                 //Changing all buttons back to normal color then highlighting user selected letter
-                element.BackColor = SystemColors.ControlLightLight;
-
-                if (element.Text.StartsWith("C"))
-                {
-                    element.BackColor = Color.Red;
-                }
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("C")) { element.BackColor = Color.Red; }
             }
         }
 
@@ -89,12 +74,7 @@ namespace SPS_ToolBox
             foreach (Button element in btnListButtons)
             {
                 //Changing all buttons back to normal color then highlighting user selected letter
-                element.BackColor = SystemColors.ControlLightLight;
-
-                if (element.Text.StartsWith("D"))
-                {
-                    element.BackColor = Color.Red;
-                }
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("D")) { element.BackColor = Color.Red; }
             }
         }
 
@@ -103,12 +83,7 @@ namespace SPS_ToolBox
             foreach (Button element in btnListButtons)
             {
                 //Changing all buttons back to normal color then highlighting user selected letter
-                element.BackColor = SystemColors.ControlLightLight;
-
-                if (element.Text.StartsWith("E"))
-                {
-                    element.BackColor = Color.Red;
-                }
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("E")) { element.BackColor = Color.Red; }
             }
         }
 
@@ -117,118 +92,208 @@ namespace SPS_ToolBox
             foreach (Button element in btnListButtons)
             {
                 //Changing all buttons back to normal color then highlighting user selected letter
-                element.BackColor = SystemColors.ControlLightLight;
-
-                if (element.Text.StartsWith("F"))
-                {
-                    element.BackColor = Color.Red;
-                }
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("F")) { element.BackColor = Color.Red; }
             }
         }
 
         private void lblG_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("G")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblH_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("H")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblI_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("I")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblJ_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("J")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("K")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("L")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblM_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("M")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblN_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("N")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblO_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("O")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblP_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("P")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblQ_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("Q")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblR_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("R")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblS_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("S")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblT_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("T")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblU_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("U")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblV_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("V")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblW_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("W")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblX_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("X")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblY_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("Y")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void lblZ_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            foreach (Button element in btnListButtons)
+            {
+                //Changing all buttons back to normal color then highlighting user selected letter
+                element.BackColor = SystemColors.ControlLightLight; if (element.Text.StartsWith("Z")) { element.BackColor = Color.Red; }
+            }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            List<string> strTxtSearch = new List<string>();
+            strTxtSearch.Add(txtSearch.Text.ToLower());
+            int intLetterTracker = 0;
+            foreach (Button element in btnListButtons)
+            {
+                intLetterTracker++;
+                if (element.Text.ToLower() == strTxtSearch[0])
+                {
+                    element.BackColor = Color.Red;
+                    if (strTxtSearch.Count > 0)
+                    {
+                        strTxtSearch[0] += strTxtSearch[1];
+                    }
+                   //ISAAC need to figure out how to highlight all buttons that match users input
+                }
+            }
         }
 
         // For all buttons listed below I am first iterating through all open Internet Explorer windows to see if the user already has the website open.
