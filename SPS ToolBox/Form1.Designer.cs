@@ -1,4 +1,6 @@
-﻿namespace SPS_ToolBox
+﻿using System.Windows.Forms;
+
+namespace SPS_ToolBox
 {
     partial class Form1
     {
@@ -19,6 +21,18 @@
             }
             base.Dispose(disposing);
         }
+        //Need to override KeyDown event handlers even if KeyPreview is true because they cannot see enter, escape, arrow buttons
+        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        //{
+        //    if (keyData == Keys.Enter)
+        //    {
+        //        //btnEquals_Click(sender, e);
+        //        //btnEquals.PerformClick();
+        //        boolEnterPressed = true;
+        //        return true;
+        //    }
+        //    return base.ProcessCmdKey(ref msg, keyData);
+        //}
 
         #region Windows Form Designer generated code
 

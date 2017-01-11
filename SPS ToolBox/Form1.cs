@@ -18,6 +18,7 @@ namespace SPS_ToolBox
     {
 
         public List<Button> btnListButtons = new List<Button>();
+        public bool boolEnterPressed = false;
 
         public Form1()
         {
@@ -300,7 +301,7 @@ namespace SPS_ToolBox
 
                 //Setting the cursor to the end of the users already entered string
                 txtSearch.SelectionStart = txtSearch.Text.Length;
-      
+
             }
 
             //Preventing user from entering a space at the beggining of text 
@@ -317,19 +318,41 @@ namespace SPS_ToolBox
             }
 
             //In case user deletes all text need to change all backcolor back to original color, otherwise all buttons turn red
-            else if (strTxtSearch[0] == "") { foreach(Button element in btnListButtons) { element.BackColor = SystemColors.ControlLightLight; } }
-            else 
+            else if (strTxtSearch[0] == "") { foreach (Button element in btnListButtons) { element.BackColor = SystemColors.ControlLightLight; } }
+
+            //Resume as normal (user isn't trying to do any of the above)
+
+            else
             {
+                //Adding a list to put red buttons into. If the list contains only 1 red button and user clicks enter - perform click
+                List<Button> strListRedButton = new List<Button>();
+                int intListTracker = 0;
                 foreach (Button element in btnListButtons)
                 {
+                    intListTracker++;
                     element.BackColor = SystemColors.ControlLightLight;
                     if (element.Text.ToLower().StartsWith(strTxtSearch[0].ToLower())) { element.BackColor = Color.Red; }
+
+                    if (element.BackColor == Color.Red) { strListRedButton.Add(element); }
+                    if ((strListRedButton.Count == 1) && (boolEnterPressed == true) && (intListTracker == btnListButtons.Count))
+                    {
+                        element.PerformClick();
+                        boolEnterPressed = false;
+                        strListRedButton.Clear();
+                    }
+
+
+
+
                 }
             }
+
+
+           
         }
 
         // For all buttons listed below I am first iterating through all open Internet Explorer windows to see if the user already has the website open.
-        // If the user has the website open, it will be closed and a new insance of IE will start
+        // If the user has the website open, it will be closed and a new instance of IE will start
         private void btnLastClicked_Click(object sender, EventArgs e)
         {
             //Captures the last button user clicked and then enables the "LastClicked" button to click the user's last clicked button
