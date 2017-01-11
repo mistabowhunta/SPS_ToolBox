@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace SPS_ToolBox
 {
@@ -22,17 +24,28 @@ namespace SPS_ToolBox
             base.Dispose(disposing);
         }
         //Need to override KeyDown event handlers even if KeyPreview is true because they cannot see enter, escape, arrow buttons
-        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        //{
-        //    if (keyData == Keys.Enter)
-        //    {
-        //        //btnEquals_Click(sender, e);
-        //        //btnEquals.PerformClick();
-        //        boolEnterPressed = true;
-        //        return true;
-        //    }
-        //    return base.ProcessCmdKey(ref msg, keyData);
-        //}
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                //Adding a list to put red buttons into. If the list contains only 1 red button and user clicks enter - perform button click
+                List<Button> strListRedButton = new List<Button>();
+                int intListTracker = 0;
+                foreach (Button element in btnListButtons)
+                {
+                    //intListTracker lets code know where in the iteration of buttons it is currently at. Basically need to know when it has iterated through all the buttons
+                    intListTracker++;
+                    if (element.BackColor == Color.Red) { strListRedButton.Add(element); }
+                    if ((strListRedButton.Count == 1) && (intListTracker == btnListButtons.Count))
+                    {
+                        strListRedButton[0].PerformClick();
+                        strListRedButton.Clear();
+                    }
+                }
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
         #region Windows Form Designer generated code
 
@@ -42,6 +55,7 @@ namespace SPS_ToolBox
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblA = new System.Windows.Forms.LinkLabel();
@@ -914,6 +928,8 @@ namespace SPS_ToolBox
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Opacity = 0.98D;
             this.Text = "SPS TOOLBOX";

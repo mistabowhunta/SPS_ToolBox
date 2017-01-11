@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPS ToolBox", "SPS ToolBox\SPS ToolBox.csproj", "{272F4A88-DBD2-4039-AD89-B393246589C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPS ToolBox Mini", "SPS ToolBox Mini\SPS ToolBox Mini.csproj", "{F9926A72-B8B2-4E96-AA38-DF6522927325}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{272F4A88-DBD2-4039-AD89-B393246589C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{272F4A88-DBD2-4039-AD89-B393246589C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{272F4A88-DBD2-4039-AD89-B393246589C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F9926A72-B8B2-4E96-AA38-DF6522927325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9926A72-B8B2-4E96-AA38-DF6522927325}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9926A72-B8B2-4E96-AA38-DF6522927325}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9926A72-B8B2-4E96-AA38-DF6522927325}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

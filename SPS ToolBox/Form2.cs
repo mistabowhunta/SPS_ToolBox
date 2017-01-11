@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
-//using SPS_ToolBox;
 
+//Imported this namespace from another project. When try to change namespace, it won't let me. Figure out why. Until then I can use using this namespace in Form3
 namespace SPS_ToolBox_Mini
 {
     public partial class Form2 : Form
